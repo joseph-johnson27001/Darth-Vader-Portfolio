@@ -13,8 +13,21 @@ body {
 NAVIGATION
 ================================================================================ */
 nav {
-  text-align: right;
   padding: 2rem;
+}
+
+#icon-container {
+    display: inline-block;
+}
+
+#nav-death-star-icon {
+  height: 100px;
+  margin-left: -30px;
+}
+
+#navigation-container {
+  display: inline-block;
+  float: right;
 }
 
 nav ul {
@@ -47,7 +60,7 @@ MAIN
 ================================================================================ */
 main {
   display: grid;
-  grid-template-columns: repeat(2, 40vw);
+  grid-template-columns: repeat(50%, 50%);
   margin: auto;
   margin-top: 5rem;
 }
@@ -59,6 +72,7 @@ main {
 #intro-image-container {
   grid-column: 2;
   text-align: center;
+  display: flex;
 }
 
 h1 {
@@ -75,12 +89,11 @@ h3 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 #darth-vader-image {
-  width: 50%;
-  height: auto;
+  height: 100%;
   margin: auto;
 }
 
@@ -92,4 +105,11 @@ p {
   font-weight: 300;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  transition: .4s;
+  cursor: pointer;
+}
+
+#about-me-button:hover {
+  background-color: #DD2736;
+  transition: .4s;
 }
