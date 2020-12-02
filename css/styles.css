@@ -27,6 +27,7 @@ NAVIGATION
 
 #nav-death-star-icon {
   height: 100px;
+  margin-top: 2rem;
   margin-left: 10rem;
   filter: invert(100%)
 }
