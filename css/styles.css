@@ -25,7 +25,7 @@ NAVIGATION
 nav  {
   font-family: 'Roboto';
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -39,9 +39,9 @@ nav  {
 }
 
 #nav-death-star-icon {
-  height: 80px;
+  height: 100px;
   margin-top: 1rem;
-  filter: invert(100%)
+  filter: invert(100%);
 }
 
 nav ul {
@@ -131,13 +131,9 @@ main {
 }
 
 #main-content-container {
-  padding-left: 3rem;
+  padding-left: 4rem;
   margin: auto;
-    max-width: 1200px;
-}
-
-#intro-text-container {
-
+  max-width: 1400px;
 }
 
 #intro-image-container {
