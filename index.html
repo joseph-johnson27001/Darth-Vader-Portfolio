@@ -3,12 +3,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
     <script defer src="js/script.js"></script>
     <title>Darth Vader Portfolio</title>
   </head>
@@ -18,32 +19,54 @@
 NAVIGATION
 ================================================================================ -->
 
-<nav>
-  <div id="icon-container">
-    <a href="#"> <img src="images/death-star-icon.png" id="nav-death-star-icon"></a>
-  </div>
-  <div id="navigation-container">
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
+<nav class="navbar navbar-expand-md " style="background-color:#1B1813;;">
+  <a class="navbar-brand" href="#">
+    <img src="images/death-star-icon.png" alt="Death Star Icon" id="nav-death-star-icon">
+  </a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
     </ul>
   </div>
 </nav>
+
+
+<!-- ================================================================================
+MAIN
+================================================================================ -->
+
+<main>
 
 <!-- ================================================================================
 SOCIAL MEDIA ICONS BAR
 ================================================================================ -->
 
-<div class="icon-bar">
-  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="google"><i class="fa fa-google"></i></a>
-</div>
+  <div class="icon-bar ">
+    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="google"><i class="fa fa-google"></i></a>
+  </div>
 
 <!-- ================================================================================
 EMAIL SIDE BAR
@@ -53,13 +76,13 @@ EMAIL SIDE BAR
   <p id="email-sidebar">darth.vader@gmail.com</p>
 </div>
 
-
 <!-- ================================================================================
-MAIN BODY
+CONTENT
 ================================================================================ -->
 
-    <main>
-      <div id="intro-text-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-7 col-lg-8" id="intro-text-container">
         <h3>- I am</h3>
         <h1>Darth Vader</h1>
         <h3>- Sith Lord</h3>
@@ -70,11 +93,18 @@ MAIN BODY
           velit esse cillum dolore eu fugiat nulla pariatur. </p>
         <button id="about-me-button">ABOUT ME</button>
       </div>
-      <div id="intro-image-container">
+      <div class="col" id="intro-image-container">
         <img src="images/darth_vader_2.png" alt="Darth Vader Image" id="darth-vader-image">
       </div>
+    </div>
+  </div>
+</main>
 
-
-    </main>
+<!-- ================================================================================
+SCRIPTS
+================================================================================ -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>
