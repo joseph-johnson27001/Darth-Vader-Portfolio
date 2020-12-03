@@ -12,7 +12,7 @@ body {
   color: white;
   margin: 50px auto;
   width: 95%;
-  max-width: 1200px;
+  max-width: 95%;
   height: 95%;
   border: 10px solid black;
   border-radius: 5px;
@@ -22,8 +22,9 @@ body {
 /* ================================================================================
 NAVIGATION
 ================================================================================ */
-nav {
-  width: 90%;
+nav  {
+  font-family: 'Roboto';
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 }
@@ -44,16 +45,18 @@ nav {
 }
 
 nav ul {
-  padding-right: 3rem;
+  margin-top: -3rem;
+}
+
+nav ul li {
+  padding: 0px 10px;
 }
 
 nav ul li a {
   display: block;
-  font-family: 'Squada One', cursive;
   color: white;
   font-size: 17px;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
@@ -72,7 +75,7 @@ EMAIL SIDE BAR
 #email-sidebar-container {
   position: absolute;
   left: -110px;
-  top: 54%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%) rotate(270deg);
@@ -84,7 +87,7 @@ EMAIL SIDE BAR
   padding: 16px;
   transition: all 0.3s ease;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -95,7 +98,7 @@ SOCIAL MEDIA ICON BAR
 .icon-bar {
   z-index: 1000;
   position: absolute;
-  right: -2%;
+  right: -1%;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -121,10 +124,20 @@ MAIN
 
 main {
   position: relative;
+  width: 100%;
+
+  padding-top: 4rem;
+  margin: auto;
+}
+
+#main-content-container {
+  padding-left: 3rem;
+  margin: auto;
+    max-width: 1200px;
 }
 
 #intro-text-container {
-  padding-left: 4rem;
+
 }
 
 #intro-image-container {
@@ -153,7 +166,7 @@ p {
   padding-top: 1rem;
   margin: auto;
   height: auto;
-  width: 80%;
+  width: 100%;
   mix-blend-mode: lighten;
 }
 
@@ -180,8 +193,8 @@ p {
 (MEDIA QUERIES)
 ================================================================================ */
 @media(max-width: 768px) {
-  #about-me-button {
-    float: right;
+  h1 {
+    font-size: 4rem;
   }
 }
 
@@ -189,8 +202,11 @@ p {
   nav {
     width: 100%;
   }
+  #main-content-container  {
+    padding-left: 0;
+  }
   #intro-text-container {
-    padding: 0;
+    padding: 1rem;
   }
   #email-sidebar-container {
     display: none;
