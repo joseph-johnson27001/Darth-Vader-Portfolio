@@ -1,10 +1,18 @@
+
+// 
+// BEGINNINGS OF FUNCTIONS FOR PAGES TO FADE OUT AND NEW PAGE FADE BACK IN
+//
+//
+// introTextContainer.classList.add("fade-out", "hide");
+// introTextContainer.classList.remove("hide", "fade-out"); introTextContainer.classList.add("fade-in")
+//
+
+
 /* ================================================================================
 VARIABLES
 ================================================================================ */
 
-
-
-
+let introTextContainer = document.getElementById("intro-text-container");
 
 
 
