@@ -1,9 +1,17 @@
 /* =============================================================================
 VARIABLES
 ================================================================================ */
-//NAVIGATION
-const btnContainer = document.getElementById("navbarNav");
-const btns = btnContainer.getElementsByClassName("nav-link");
+// NAVIGATION
+const btnContainer = document.getElementById("navbarNav")
+const btns = btnContainer.getElementsByClassName("nav-link")
+
+// NAVIGATION BUTTONS
+const navHomeButton = document.getElementById("nav-home-button")
+const navAboutButton = document.getElementById("nav-about-button")
+const navServicesButton = document.getElementById("nav-services-button")
+const navPortfolioButton = document.getElementById("nav-portfolio-button")
+const navBlogButton = document.getElementById("nav-blog-button")
+const navContactButton = document.getElementById("nav-contact-button")
 
 // ON PAGE BUTTONS
 const aboutMeButton = document.getElementById("about-me-button")
@@ -31,33 +39,81 @@ let allContentContainers = informationContentContainer.children
 /* ================================================================================
 EVENT LISTENERS
 ================================================================================ */
+// NAVIGATION BUTTON EVENT LISTENERS
+// ============================================================================
 
-aboutMeButton.addEventListener("click", () => {
+navHomeButton.addEventListener("click", () => {
+  hideCurrentSection();
+  setTimeout(showIntroSection, 400);
+})
+
+navAboutButton.addEventListener("click", () => {
   hideCurrentSection();
   setTimeout(showAboutSection, 400);
 });
 
+navServicesButton.addEventListener("click", () => {
+  hideCurrentSection();
+  setTimeout(showServicesSection, 400);
+});
+
+navPortfolioButton.addEventListener("click", () => {
+  hideCurrentSection();
+  setTimeout(showPortfolioSection, 400);
+});
+
+navBlogButton.addEventListener("click", () => {
+  hideCurrentSection();
+  setTimeout(showBlogSection, 400);
+});
+
+navContactButton.addEventListener("click", () => {
+  hideCurrentSection();
+  setTimeout(showContactSection, 400);
+});
+
+
+
+// MAIN CONTENT BUTTON EVENT LISTENERS
+// =============================================================================
+aboutMeButton.addEventListener("click", () => {
+    removeActiveNavClass();
+    navAboutButton.classList.add("active");
+    hideCurrentSection();
+    setTimeout(showAboutSection, 400);
+});
+
 servicesButton.addEventListener("click", () => {
+  removeActiveNavClass();
+  navServicesButton.classList.add("active");
   hideCurrentSection();
   setTimeout(showServicesSection, 400);
 });
 
 portfolioButton.addEventListener("click", () => {
+  removeActiveNavClass();
+  navPortfolioButton.classList.add("active");
   hideCurrentSection();
   setTimeout(showPortfolioSection, 400)
 });
 
 blogButton.addEventListener("click", () => {
+  removeActiveNavClass();
+  navBlogButton.classList.add("active");
   hideCurrentSection();
   setTimeout(showBlogSection, 400)
 });
 
 contactButton.addEventListener("click", () => {
+  removeActiveNavClass();
+  navContactButton.classList.add("active");
   hideCurrentSection();
   setTimeout(showContactSection, 400)
 });
 
 homeButton.addEventListener("click", () => {
+  removeActiveNavClass();
+  navHomeButton.classList.add("active");
   hideCurrentSection();
   setTimeout(showIntroSection, 400)
 });
@@ -71,12 +127,17 @@ FUNCTIONS
 
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", "");
-    }
+    removeActiveNavClass();
     this.className += " active";
   });
+}
+
+// Function to remove active class on nav when clicking on screen BUTTONS
+function removeActiveNavClass() {
+  let current = document.getElementsByClassName("active");
+  if (current.length > 0) {
+    current[0].className = current[0].className.replace(" active", "");
+  }
 }
 
 // MAIN CONTENT FUNCTIONS
