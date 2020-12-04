@@ -10,6 +10,8 @@ const aboutMeButton = document.getElementById("about-me-button")
 const servicesButton = document.getElementById("services-button")
 const portfolioButton = document.getElementById("portfolio-button")
 const blogButton = document.getElementById("blog-button")
+const contactButton = document.getElementById("contact-button")
+const homeButton = document.getElementById("home-button")
 
 // CONTAINERS
 const informationContentContainer = document.getElementById("information-content-container")
@@ -18,6 +20,7 @@ const aboutMeContainer = document.getElementById("about-me-container")
 const servicesContainer = document.getElementById("services-container")
 const portfolioContainer = document.getElementById("portfolio-container")
 const blogContainer = document.getElementById("blog-container")
+const contactContainer = document.getElementById("contact-container")
 
 // ARRAYS
 let allContentContainers = informationContentContainer.children
@@ -47,6 +50,16 @@ portfolioButton.addEventListener("click", () => {
 blogButton.addEventListener("click", () => {
   hideCurrentSection();
   setTimeout(showBlogSection, 400)
+});
+
+contactButton.addEventListener("click", () => {
+  hideCurrentSection();
+  setTimeout(showContactSection, 400)
+});
+
+homeButton.addEventListener("click", () => {
+  hideCurrentSection();
+  setTimeout(showIntroSection, 400)
 });
 
 /* =============================================================================
@@ -113,4 +126,10 @@ function showPortfolioSection() {
 function showBlogSection() {
   blogContainer.classList.remove("hide", "fade-out");
   blogContainer.classList.add("fade-in");
+}
+// Funciton to show contact div
+
+function showContactSection() {
+  contactContainer.classList.remove("hide", "fade-out");
+  contactContainer.classList.add("fade-in");
 }
