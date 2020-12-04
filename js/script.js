@@ -77,44 +77,38 @@ navContactButton.addEventListener("click", () => {
 // MAIN CONTENT BUTTON EVENT LISTENERS
 // =============================================================================
 aboutMeButton.addEventListener("click", () => {
-    removeActiveNavClass();
+    removeAndHide()
     navAboutButton.classList.add("active");
-    hideCurrentSection();
     setTimeout(showAboutSection, 400);
 });
 
 servicesButton.addEventListener("click", () => {
-  removeActiveNavClass();
+  removeAndHide()
   navServicesButton.classList.add("active");
-  hideCurrentSection();
   setTimeout(showServicesSection, 400);
 });
 
 portfolioButton.addEventListener("click", () => {
-  removeActiveNavClass();
+  removeAndHide()
   navPortfolioButton.classList.add("active");
-  hideCurrentSection();
   setTimeout(showPortfolioSection, 400)
 });
 
 blogButton.addEventListener("click", () => {
-  removeActiveNavClass();
+  removeAndHide()
   navBlogButton.classList.add("active");
-  hideCurrentSection();
   setTimeout(showBlogSection, 400)
 });
 
 contactButton.addEventListener("click", () => {
-  removeActiveNavClass();
+  removeAndHide()
   navContactButton.classList.add("active");
-  hideCurrentSection();
   setTimeout(showContactSection, 400)
 });
 
 homeButton.addEventListener("click", () => {
-  removeActiveNavClass();
+  removeAndHide()
   navHomeButton.classList.add("active");
-  hideCurrentSection();
   setTimeout(showIntroSection, 400)
 });
 
@@ -125,6 +119,7 @@ FUNCTIONS
 // NAVIGATION FUNCTIONS
 // =============================================================================
 
+// Function to give targeted button active status
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     removeActiveNavClass();
@@ -193,4 +188,12 @@ function showBlogSection() {
 function showContactSection() {
   contactContainer.classList.remove("hide", "fade-out");
   contactContainer.classList.add("fade-in");
+}
+
+
+// Combined function to remove active class on nav and to hide current section on PAGE
+
+function removeAndHide() {
+  removeActiveNavClass();
+  hideCurrentSection()
 }
