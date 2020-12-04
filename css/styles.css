@@ -125,7 +125,6 @@ MAIN
 main {
   position: relative;
   width: 100%;
-
   padding-top: 4rem;
   margin: auto;
 }
@@ -156,6 +155,10 @@ h3 {
 
 p {
   font-size: 1.2rem;
+}
+
+i {
+  font-weight: 300;
 }
 
 #darth-vader-image {
@@ -191,6 +194,15 @@ p {
 .hide {
   display: none;
 }
+/* BOTTOM LEFT INFORMATION */
+/* =========================================================================== */
+
+
+/* #bottom-left-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+} */
 
 /* ================================================================================
 (MEDIA QUERIES)
@@ -198,6 +210,9 @@ p {
 @media(max-width: 768px) {
   h1 {
     font-size: 4rem;
+  }
+  #nav-death-star-icon {
+    height: 75px;
   }
 }
 
