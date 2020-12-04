@@ -31,10 +31,7 @@ const blogContainer = document.getElementById("blog-container")
 const contactContainer = document.getElementById("contact-container")
 
 // ARRAYS
-let allContentContainers = informationContentContainer.children
-
-
-
+const allContentContainers = informationContentContainer.children
 
 /* ================================================================================
 EVENT LISTENERS
