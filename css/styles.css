@@ -166,7 +166,7 @@ p {
   mix-blend-mode: lighten;
 }
 
-#about-me-button {
+.form-buttons {
   color: white;
   border: 1px solid #DD2736;
   background-color: transparent;
@@ -178,16 +178,18 @@ p {
   border-bottom-right-radius: 15px;
   transition: .4s;
   cursor: pointer;
-  outline: none;
 }
 
-#about-me-button:hover {
+.form-buttons:hover {
   background-color: #DD2736;
+}
+
+.form-buttons:focus {
+    outline: none;
 }
 
 .hide {
   display: none;
-  transition-duration: .5s;
 }
 
 /* ================================================================================
@@ -224,6 +226,7 @@ KEY FRAMES
 .fade-in {
   animation: fadeIn ease .8s;
 }
+
 @keyframes fadeIn {
   0% {
     opacity:0;
@@ -234,7 +237,7 @@ KEY FRAMES
 }
 
 .fade-out {
-  animation: fadeOut ease .8s;
+  animation: fadeOut ease .5s;
 }
 
 @keyframes fadeOut {

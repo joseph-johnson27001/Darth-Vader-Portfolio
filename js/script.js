@@ -1,5 +1,5 @@
 
-// 
+//
 // BEGINNINGS OF FUNCTIONS FOR PAGES TO FADE OUT AND NEW PAGE FADE BACK IN
 //
 //
@@ -7,15 +7,72 @@
 // introTextContainer.classList.remove("hide", "fade-out"); introTextContainer.classList.add("fade-in")
 //
 
+/* ================================================================================
+FUNCTIONS
+================================================================================ */
+
+function hideIntroSection() {
+  introTextContainer.classList.add("fade-out");
+    setTimeout(function(){
+    introTextContainer.classList.add("hide");
+  }, 400);
+}
+
+function hideAboutSection() {
+  aboutMeContainer.classList.add("fade-out");
+    setTimeout(function(){
+    aboutMeContainer.classList.add("hide");
+  }, 400);
+}
+
+function showIntroSection() {
+  introTextContainer.classList.remove("hide", "fade-out");
+  introTextContainer.classList.add("fade-in")
+}
+
+function showAboutSection() {
+  aboutMeContainer.classList.remove("hide");
+  aboutMeContainer.classList.add("fade-in");
+}
+
+function showServicesSection() {
+  servicesContainer.classList.remove("hide");
+  servicesContainer.classList.add("fade-in");
+}
+
+
+
 
 /* ================================================================================
 VARIABLES
 ================================================================================ */
 
-let introTextContainer = document.getElementById("intro-text-container");
+// ON PAGE BUTTONS
+
+const aboutMeButton = document.getElementById("about-me-button")
+const servicesButton = document.getElementById("services-button")
+
+
+// CONTAINERS
+const introTextContainer = document.getElementById("intro-text-container")
+const aboutMeContainer = document.getElementById("about-me-container")
+const servicesContainer = document.getElementById("services-container")
 
 
 
+/* ================================================================================
+EVENT LISTENERS
+================================================================================ */
+
+aboutMeButton.addEventListener("click", () => {
+  hideIntroSection();
+  setTimeout(showAboutSection, 400);
+});
+
+servicesButton.addEventListener("click", () => {
+  hideAboutSection();
+  setTimeout(showServicesSection, 400);
+})
 
 
 /* ================================================================================
