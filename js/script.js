@@ -1,62 +1,27 @@
-
-//
-// BEGINNINGS OF FUNCTIONS FOR PAGES TO FADE OUT AND NEW PAGE FADE BACK IN
-//
-//
-// introTextContainer.classList.add("fade-out", "hide");
-// introTextContainer.classList.remove("hide", "fade-out"); introTextContainer.classList.add("fade-in")
-//
-
-/* ================================================================================
-FUNCTIONS
-================================================================================ */
-
-function hideIntroSection() {
-  introTextContainer.classList.add("fade-out");
-    setTimeout(function(){
-    introTextContainer.classList.add("hide");
-  }, 400);
-}
-
-function hideAboutSection() {
-  aboutMeContainer.classList.add("fade-out");
-    setTimeout(function(){
-    aboutMeContainer.classList.add("hide");
-  }, 400);
-}
-
-function showIntroSection() {
-  introTextContainer.classList.remove("hide", "fade-out");
-  introTextContainer.classList.add("fade-in")
-}
-
-function showAboutSection() {
-  aboutMeContainer.classList.remove("hide");
-  aboutMeContainer.classList.add("fade-in");
-}
-
-function showServicesSection() {
-  servicesContainer.classList.remove("hide");
-  servicesContainer.classList.add("fade-in");
-}
-
-
-
-
-/* ================================================================================
+/* =============================================================================
 VARIABLES
 ================================================================================ */
+//NAVIGATION
+const btnContainer = document.getElementById("navbarNav");
+const btns = btnContainer.getElementsByClassName("nav-link");
 
 // ON PAGE BUTTONS
-
 const aboutMeButton = document.getElementById("about-me-button")
 const servicesButton = document.getElementById("services-button")
-
+const portfolioButton = document.getElementById("portfolio-button")
+const blogButton = document.getElementById("blog-button")
 
 // CONTAINERS
+const informationContentContainer = document.getElementById("information-content-container")
 const introTextContainer = document.getElementById("intro-text-container")
 const aboutMeContainer = document.getElementById("about-me-container")
 const servicesContainer = document.getElementById("services-container")
+const portfolioContainer = document.getElementById("portfolio-container")
+const blogContainer = document.getElementById("blog-container")
+
+// ARRAYS
+let allContentContainers = informationContentContainer.children
+
 
 
 
@@ -65,37 +30,87 @@ EVENT LISTENERS
 ================================================================================ */
 
 aboutMeButton.addEventListener("click", () => {
-  hideIntroSection();
+  hideCurrentSection();
   setTimeout(showAboutSection, 400);
 });
 
 servicesButton.addEventListener("click", () => {
-  hideAboutSection();
+  hideCurrentSection();
   setTimeout(showServicesSection, 400);
-})
+});
 
+portfolioButton.addEventListener("click", () => {
+  hideCurrentSection();
+  setTimeout(showPortfolioSection, 400)
+});
 
-/* ================================================================================
-NAV BAR
+blogButton.addEventListener("click", () => {
+  hideCurrentSection();
+  setTimeout(showBlogSection, 400)
+});
+
+/* =============================================================================
+FUNCTIONS
 ================================================================================ */
 
-// Get the container element
-var btnContainer = document.getElementById("navbarNav");
+// NAVIGATION FUNCTIONS
+// =============================================================================
 
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("nav-link");
-
-// Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");
-
-    // If there's no active class
     if (current.length > 0) {
       current[0].className = current[0].className.replace(" active", "");
     }
-
-    // Add the active class to the current/clicked button
     this.className += " active";
   });
+}
+
+// MAIN CONTENT FUNCTIONS
+// =============================================================================
+
+// FUNCTION TO HIDE CURRENT SECTION
+
+function hideCurrentSection() {
+  for (let i = 0; i < allContentContainers.length; i++) {
+      allContentContainers[i].classList.add("fade-out")
+      setTimeout(function(){
+      allContentContainers[i].classList.add("hide")
+    }, 400)
+  }
+}
+
+//Function to show introduction div
+
+function showIntroSection() {
+  introTextContainer.classList.remove("hide", "fade-out");
+  introTextContainer.classList.add("fade-in")
+}
+
+// Function to show about section div
+
+function showAboutSection() {
+  aboutMeContainer.classList.remove("hide", "fade-out");
+  aboutMeContainer.classList.add("fade-in");
+}
+
+// Funciton to show services div
+
+function showServicesSection() {
+  servicesContainer.classList.remove("hide", "fade-out");
+  servicesContainer.classList.add("fade-in");
+}
+
+// Funciton to show portfolio div
+
+function showPortfolioSection() {
+  portfolioContainer.classList.remove("hide", "fade-out");
+  portfolioContainer.classList.add("fade-in");
+}
+
+// Funciton to show blog div
+
+function showBlogSection() {
+  blogContainer.classList.remove("hide", "fade-out");
+  blogContainer.classList.add("fade-in");
 }
