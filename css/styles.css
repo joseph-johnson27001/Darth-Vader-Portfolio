@@ -29,6 +29,10 @@ nav  {
   margin: auto;
 }
 
+.navbar-nav {
+  margin-top: 1px
+}
+
 .custom-toggler.navbar-toggler {
    border-color: #f7f7f7;
 }
