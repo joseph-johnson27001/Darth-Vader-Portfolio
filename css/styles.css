@@ -232,6 +232,7 @@ i {
   }
   p {
     text-shadow: 2px 2px 4px black;
+    overflow-wrap: break-word;
   }
   #main-content-container  {
     padding-left: 0;
@@ -239,9 +240,6 @@ i {
   #intro-text-container {
     padding: 1rem;
   }
-  /* #intro-image-container {
-    display: none;
-  } */
   #email-sidebar-container {
     display: none;
   }
