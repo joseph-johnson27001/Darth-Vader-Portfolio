@@ -139,6 +139,7 @@ main {
   margin: auto;
   max-width: 1400px;
   padding-bottom: 150px;
+  width: 80%;
 }
 
 #intro-image-container {
@@ -292,6 +293,12 @@ i {
     font-size: 4rem;
   }
 
+}
+
+@media(max-width: 1064px) {
+  #main-content-container  {
+    width: 100%;
+  }
 }
 
 /* ================================================================================
